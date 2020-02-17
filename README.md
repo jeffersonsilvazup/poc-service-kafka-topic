@@ -27,7 +27,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
 
 ### Routes
 
-#### GET: http://loccalhost:8080/qrcode
+#### GET: http://localhost:8080/qrcode
 
 ```json
 {
@@ -40,7 +40,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
 }
 ```
 
-#### POST: http://loccalhost:8080/qrcode
+#### POST: http://localhost:8080/qrcode
 
 ```json
 {
