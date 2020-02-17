@@ -23,7 +23,7 @@ mvn clean spring-boot:run
 
 ```
 
-After executing the above commands, create a table in DynamoDB with the name 'QrCode' and an 'id' attribute of Scalar type String and HASH partition key.
+After executing the above commands, create a table in DynamoDB with the name 'QrCode' and a 'id' attribute of Scalar type String and HASH partition key.
 
 ### Routes
 
