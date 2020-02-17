@@ -1,0 +1,13 @@
+package br.com.zup.cashmanagement;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CashManagementApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CashManagementApplication.class, args);
+	}
+
+}
