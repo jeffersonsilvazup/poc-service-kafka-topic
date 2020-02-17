@@ -1,8 +1,8 @@
-# POC Spring Boot + DynamoDB +  Kafka
+# POC Spring Boot + DynamoDB +  Kafka :money_with_wings:
 
 ## About project
 
-The principal objective of this project is study a little about <a href="https://kafka.apache.org/" target="_blank" >Kafka</a> and <a href="https://aws.amazon.com/pt/dynamodb/" target="_blank" >Dynamo DB</a>.
+The principal objective of this project is study a little about <a href="https://kafka.apache.org/" target="_blank" >Kafka</a>, <a href="https://aws.amazon.com/pt/dynamodb/" target="_blank" >Dynamo DB</a> and <a href="https://razorsql.com/" target="_blank" >RazorSQL</a>.
 
 ### Configure project
 
