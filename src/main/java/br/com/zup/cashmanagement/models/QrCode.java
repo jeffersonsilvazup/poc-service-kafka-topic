@@ -86,7 +86,7 @@ public class QrCode {
     }
 
     @DynamoDBAttribute
-    public String identificador() {
+    public String getIdentificador() {
         return indentificador;
     }
 

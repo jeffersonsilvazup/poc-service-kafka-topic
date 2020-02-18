@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 @RestController
-@RequestMapping(path = "/qrcode-estatico")
+@RequestMapping(path = "/qrcode/estatico")
 public class QrCodeEstaticoController {
 
     @Autowired
