@@ -30,23 +30,67 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
 #### GET: http://localhost:8080/qrcode
 
 ```json
-{
-    [
-        "id":"xxxx-xxxx-xxxx-xxxx",
-        "url":"http://localhost:8080/url",
-        "valor":100,
-        "alias":"mateus.zup@itau"
-    ]
-}
+[
+  {
+    "id": "xxxxxx-xxxxx-xxxxx-xxxx-xxxxxxx",
+    "valor": 100,
+    "tipo": "ESTATICO",
+    "alias": "matesu.zup@itau",
+    "banco": null,
+    "tipoConta": null,
+    "agencia": null,
+    "conta": null,
+    "url": null,
+    "juros": null,
+    "multa": null,
+    "desconto": null,
+    "abatimento": null,
+    "vencimento": null
+  },
+  {
+    "id": "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx",
+    "valor": 200,
+    "tipo": "DINAMICO",
+    "alias": null,
+    "banco": 260,
+    "tipoConta": "POUPANCA",
+    "agencia": 4234,
+    "conta": 5555555,
+    "url": "http://localhost:8080/qrcode-estatico/x",
+    "juros": 2,
+    "multa": 10,
+    "desconto": 0,
+    "abatimento": 0,
+    "vencimento": "2020-02-19"
+  }
+]
 ```
 
-#### POST: http://localhost:8080/qrcode
+#### POST: http://localhost:8080/qrcode-estatico
 
 ```json
 {
-    "url":"http://localhost:8080/url",
-    "valor":100,
-    "alias":"mateus.zup@itau"
+	"alias":"matesu.zup@itau",
+	"valor":100
+}
+```
+
+#### POST: http://localhost:8080/qrcode-dinamico
+
+```json
+{
+    "valor":200,
+    "banco":260,
+    "conta":5555555,
+	"agencia":4234,
+    "url":"http://localhost:8080/qrcode-estatico/x",
+    "indentificador":"xxxxxxxx-yyyyyy",
+    "juros":2,
+    "multa":10,
+    "desconto":0,
+    "abatimento":0,
+    "vencimento":"2020-02-19",
+    "tipoConta":1
 }
 ```
 
