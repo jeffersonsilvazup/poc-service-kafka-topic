@@ -56,7 +56,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
     "tipoConta": "POUPANCA",
     "agencia": 4234,
     "conta": 5555555,
-    "url": "http://localhost:8080/qrcode-estatico/x",
+    "url": "http://localhost:8080/qrcode/estatico/x",
     "juros": 2,
     "multa": 10,
     "desconto": 0,
@@ -78,7 +78,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
     "tipoConta": "POUPANCA",
     "agencia": 4234,
     "conta": 5555555,
-    "url": "http://localhost:8080/qrcode-estatico/x",
+    "url": "http://localhost:8080/qrcode/estatico/x",
     "juros": 2,
     "multa": 10,
     "desconto": 0,
@@ -88,7 +88,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
   }
 ```
 
-#### POST: http://localhost:8080/qrcode-estatico
+#### POST: http://localhost:8080/qrcode/estatico
 
 ```json
 {
@@ -97,7 +97,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
 }
 ```
 
-#### POST: http://localhost:8080/qrcode-dinamico
+#### POST: http://localhost:8080/qrcode/dinamico
 
 ```json
 {
@@ -105,7 +105,7 @@ After executing the above commands, create a table in DynamoDB with the name 'Qr
     "banco":260,
     "conta":5555555,
 	  "agencia":4234,
-    "url":"http://localhost:8080/qrcode-estatico/x",
+    "url":"http://localhost:8080/qrcode/estatico/x",
     "indentificador":"xxxxxxxx-yyyyyy",
     "juros":2,
     "multa":10,
