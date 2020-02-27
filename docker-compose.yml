@@ -2,10 +2,19 @@ version: "3"
 
 services:
   # comment dynamodb docker in aws
-  dynamodb:
-    image: amazon/dynamodb-local:latest
-    ports:
-      - 8000:8000
+  # dynamodb:
+  #   image: amazon/dynamodb-local:latest
+  #   ports:
+  #     - 8000:8000
+  
+  spring:
+    build:
+      context: .
+      dockerfile: docker/spring.dockerfile
+    network_mode: host
+    depends_on:
+      - kafka
+    restart: on-failure
   
   zookeeper:
     image: confluentinc/cp-zookeeper:5.2.1
@@ -14,18 +23,15 @@ services:
       ZOOKEEPER_CLIENT_PORT: 32181
       ZOOKEEPER_TICK_TIME: 2000
       ZOOKEEPER_SYNC_LIMIT: 2
-    extra_hosts:
-      - "moby:127.0.0.1"
 
   kafka:
-    image: confluentinc/cp-kafka:5.2.1
+    image: wurstmeister/kafka
+    command: [start-kafka.sh]
     network_mode: host
-    depends_on:
-      - zookeeper
     environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: "qrcode-save:1:1" # topic:partition:replicas
+      KAFKA_ADVERTISED_HOST_NAME: localhost # docker-machine ip
       KAFKA_ZOOKEEPER_CONNECT: localhost:32181
-    extra_hosts:
-      - "moby:127.0.0.1"
+      KAFKA_ADVERTISED_PORT: 9092
+    depends_on:
+      - "zookeeper"

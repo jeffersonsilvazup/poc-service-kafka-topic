@@ -14,12 +14,9 @@ After clone this project, enter in the folder of the project and execute the fol
 ```
 cd /path/project/poc-service-kafka-topic
 
+mvn install -DskipTests
+
 docker-compose up -d
-
-docker-compose exec kafka  \
-kafka-topics --create --topic qrcode-save --partitions 1 --replication-factor 1 --if-not-exists --zookeeper localhost:32181
-
-mvn clean spring-boot:run
 
 ```
 
