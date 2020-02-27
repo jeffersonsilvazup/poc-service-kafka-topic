@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+  # comment dynamodb docker in aws
   dynamodb:
     image: amazon/dynamodb-local:latest
     ports:
