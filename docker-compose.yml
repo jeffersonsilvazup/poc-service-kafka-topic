@@ -2,10 +2,10 @@ version: "3"
 
 services:
   # comment dynamodb docker in aws
-  # dynamodb:
-  #   image: amazon/dynamodb-local:latest
-  #   ports:
-  #     - 8000:8000
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    ports:
+      - 8000:8000
   
   spring:
     build:
